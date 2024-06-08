@@ -7,7 +7,7 @@ import member.model.vo.Silver;
 import member.model.vo.Vip;
 
 public class Run {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         try {
             MemberRepository memberRepository = new MemberRepository();
             memberRepository.insertMember(new Silver("홍길동", "Silver", 1000));
@@ -17,10 +17,10 @@ public class Run {
             memberRepository.insertMember(new Gold("이회장", "Gold", 2000));
             memberRepository.insertMember(new Gold("오회장", "Gold", 3000));
             memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
-//            memberRepository.insertMember(new Vip("이회장", "Vip", 10000));
-//            memberRepository.insertMember(new Vip("박회장", "Vip", 10000));
-//            memberRepository.insertMember(new Vip("이사장", "Vip", 10000));
-//            memberRepository.insertMember(new Vip("박사장", "Vip", 10000));
+            memberRepository.insertMember(new Vip("이회장", "Vip", 10000));
+            memberRepository.insertMember(new Vip("박회장", "Vip", 10000));
+            memberRepository.insertMember(new Vip("이사장", "Vip", 10000));
+            memberRepository.insertMember(new Vip("박사장", "Vip", 10000));
 
 //memberRepository();
 
@@ -30,15 +30,10 @@ public class Run {
             System.out.println("=========================== 회원 구매 정보 ===========================");
             memberRepository.printBuyInfo(10000);
 
-        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-
+        } catch (OverMemberException e) {
+           e.printStackTrace();
         }
 
 
-    }
-
-    public static void memberRepository() throws OverMemberException {
-        throw new OverMemberException();
     }
 }
