@@ -15,16 +15,14 @@ public class MemberRepository {
     private static final int MAX_MEMBERS = 10;
     List<Member> members = new ArrayList<>();
 
-    public void insertMember(Member m) {
-        try{
-            members.add(m);
+    public void insertMember(Member m) throws OverMemberException {
 
-            if (members.size() > MAX_MEMBERS){
-                throw new OverMemberException();
-            };
-        } catch (OverMemberException e){
-            System.out.println();
-        }
+
+        if (members.size() > MAX_MEMBERS){
+            throw new OverMemberException("Member List is Full.");
+        };
+
+        members.add(m);
 
         }
 
