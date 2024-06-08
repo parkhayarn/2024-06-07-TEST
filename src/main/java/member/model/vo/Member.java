@@ -38,6 +38,10 @@ public abstract class Member {
         this.point = point;
     }
 
+    public int buy(int price){
+        return price;
+    }
+
     public abstract double calculateInterest();
 
 

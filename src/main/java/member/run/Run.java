@@ -17,15 +17,28 @@ public class Run {
             memberRepository.insertMember(new Gold("이회장", "Gold", 2000));
             memberRepository.insertMember(new Gold("오회장", "Gold", 3000));
             memberRepository.insertMember(new Vip("이순신", "Vip", 10000));
+//            memberRepository.insertMember(new Vip("이회장", "Vip", 10000));
+//            memberRepository.insertMember(new Vip("박회장", "Vip", 10000));
+//            memberRepository.insertMember(new Vip("이사장", "Vip", 10000));
+//            memberRepository.insertMember(new Vip("박사장", "Vip", 10000));
 
+//memberRepository();
 
             System.out.println("=========================== 회원 포인트 적립 정보 ===========================");
             memberRepository.printData();
 
+            System.out.println("=========================== 회원 구매 정보 ===========================");
+            memberRepository.printBuyInfo(10000);
+
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+//            System.out.println(e.getMessage());
+
         }
 
 
+    }
+
+    public static void memberRepository() throws OverMemberException {
+        throw new OverMemberException();
     }
 }
