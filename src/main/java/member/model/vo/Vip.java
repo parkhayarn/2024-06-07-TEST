@@ -10,7 +10,8 @@ public class Vip extends Member implements Buyable{
 
     @Override
     public int buy(int price) {
-        return 0;
+        double sale = price * 0.1;
+        return (int)(price - sale);
     }
 
     @Override
