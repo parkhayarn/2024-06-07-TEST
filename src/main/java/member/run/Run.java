@@ -20,7 +20,7 @@ public class Run {
             memberRepository.insertMember(new Vip("이회장", "Vip", 10000));
             memberRepository.insertMember(new Vip("박회장", "Vip", 10000));
             memberRepository.insertMember(new Vip("이사장", "Vip", 10000));
-            memberRepository.insertMember(new Vip("박사장", "Vip", 10000));
+//            memberRepository.insertMember(new Vip("박사장", "Vip", 10000));
 
 //memberRepository();
 
