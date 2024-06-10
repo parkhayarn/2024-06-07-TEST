@@ -28,7 +28,8 @@ public class Run {
             memberRepository.printData();
 
             System.out.println("=========================== 회원 구매 정보 ===========================");
-            memberRepository.printBuyInfo(10000);
+            int price = 10000;
+            memberRepository.printBuyInfo(price);
 
         } catch (OverMemberException e) {
            e.printStackTrace();
